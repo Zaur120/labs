@@ -1,0 +1,16 @@
+import math
+
+# Verilmiş funksiyalara əsasən hesablamalar
+a = 4**0.25 - ((2 * math.sqrt(2))**(4/3)) * math.tan(4)
+b = math.cos(2 * math.log10(1/5) - math.log10(1/4))
+
+# Şərtə uyğun olaraq k-nin hesablanması
+if abs(a) < 5 * abs(b):
+    k = math.log(abs(2 * a - 3 * math.exp(2) * b))
+else:
+    k = math.log(abs(2 * a * math.exp(2) - 3 * b))
+
+# Nəticələri çap edirik
+print(f"a = {a}")
+print(f"b = {b}")
+print(f"k = {k}")
