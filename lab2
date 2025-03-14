@@ -1,0 +1,19 @@
+import numpy as np
+
+# x aralığını və addımı təyin edirik
+x_values = np.arange(-1, 7, 1)  # x ∈ [-1, 6] və Δx = 1
+y_values = []
+
+# Funksiya şərtlərinə əsasən y-i hesablayırıq
+for x in x_values:
+    if x == 2:
+        y = 6 * x**2 + 1
+    elif x > 2:
+        y = 8 * x - 3
+    else:  # x < 2
+        y = 4 * x + 8
+    y_values.append(y)
+
+# Nəticələri çap edirik
+for x, y in zip(x_values, y_values):
+    print(f"x = {x}, y = {y}")
