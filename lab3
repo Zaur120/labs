@@ -1,0 +1,14 @@
+x = 0.5  # Verilmiş x dəyəri
+epsilon = 0.01  # Dəqiqlik şərti
+term = x  # İlk hədd
+P = term  # Cəmi hesablamaq üçün dəyişən
+n = 2  # Hədlərin surətçisi (2-dən başlayır)
+
+# Sonsuz silsiləni ε dəqiqliklə hesablayırıq
+while abs(term) >= epsilon:
+    term = (-1) * (x ** n) / n  # Hər yeni həddin hesablanması
+    P += term  # Cəmi yeniləyirik
+    n += 1  # Növbəti hədd üçün artırırıq
+
+# Nəticəni çap edirik
+print(f"P ≈ {P}")
