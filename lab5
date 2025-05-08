@@ -1,0 +1,13 @@
+import random
+
+n = int(input("Siyahının elementlərinin sayını daxil edin: "))
+
+numbers = [random.uniform(0, 7) for _ in range(n)]
+
+product = 1
+for num in numbers:
+    product *= num
+
+print("Yaradılmış təsadüfi ədədlər siyahısı:")
+print(numbers)
+print("Elementlərin hasili:", product)
