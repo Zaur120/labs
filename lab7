@@ -1,0 +1,23 @@
+numbers = [12, 7, 5, 8, 3, 10, 9]
+
+with open("massiv.txt", "w") as f:
+    for num in numbers:
+        f.write(str(num) + "\n")
+
+odd_numbers = []
+with open("massiv.txt", "r") as f:
+    for line in f:
+        num = int(line.strip())
+        if num % 2 != 0:
+            odd_numbers.append(num)
+
+
+with open("tek_ededler.txt", "w") as f:
+    for num in odd_numbers:
+        f.write(str(num) + "\n")
+
+
+odd_sum = sum(odd_numbers)
+
+print("Tək ədədlər:", odd_numbers)
+print("Tək ədədlərin cəmi:", odd_sum)
