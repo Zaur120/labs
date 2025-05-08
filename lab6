@@ -1,0 +1,18 @@
+n = int(input("Sətir sayı (n): "))
+m = int(input("Sütun sayı (m): "))
+
+A = []
+
+print("Massivin elementlərini daxil edin:")
+for i in range(n):
+    row = []
+    for j in range(m):
+        element = float(input(f"A[{i}][{j}] = "))
+        row.append(element)
+    A.append(row)
+
+
+print("\nHər sətrin elementləri cəmi:")
+for i in range(n):
+    row_sum = sum(A[i])
+    print(f"{i + 1}-ci sətrin cəmi: {row_sum}")
