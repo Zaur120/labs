@@ -1,0 +1,9 @@
+import random
+
+n = 10  
+
+random_list = [random.uniform(1, 5) for _ in range(n)]
+
+print("Təsadüfi həqiqi ədədlər siyahısı:")
+for number in random_list:
+    print(number)
